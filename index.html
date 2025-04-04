@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Rahul</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #ffcccb;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        #gift-box {
+            width: 150px;
+            height: 150px;
+            background: url('1000156168.jpg') no-repeat center;
+            background-size: cover;
+            margin: auto;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #image-container {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #rahul-image {
+            width: 300px;
+            border-radius: 15px;
+        }
+        #happy-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            width: 50px;
+            height: 70px;
+            background: red;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        #footer-text {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gift-box" onclick="openGift()"></div>
+    <p id="message">Click on the Box RAHUL</p>
+    
+    <div id="image-container">
+        <div id="happy-text">HAPPY BIRTHDAY RAHUL JI</div>
+        <img id="rahul-image" src="1000156165.png" alt="Rahul">
+    </div>
+    
+    <div id="footer-text">Birthday Wishes From SHUBHAM</div>
+    
+    <script>
+        function openGift() {
+            let giftBox = document.getElementById("gift-box");
+            giftBox.style.transform = "translate(-50%, -300px)";
+            setTimeout(() => {
+                giftBox.style.display = "none";
+                document.getElementById("message").style.display = "none";
+                document.getElementById("image-container").style.display = "block";
+                document.getElementById("footer-text").style.display = "block";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
